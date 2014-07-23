@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+
+<style>
+
+*{
+padding: 0px;
+margin: 0px;
+}
+
+</style>
+
+<body>
+
+<img id="nature" src="nature.jpg" style="display: none;"></img>
+<canvas id="canvas"></canvas>
+
+<script>
+
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+canvas.height=canvas.width=1100;
+
+window.onload = function() {
+	ctx.drawImage(nature,0,0);
+	}
+	
+	
+</script>
+
+
+</body>
+</html>

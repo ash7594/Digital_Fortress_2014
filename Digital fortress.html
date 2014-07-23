@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<!--BEGINNING PAGE-->
+</head>
+
+<style>
+
+*{
+margin: 0px;
+padding: 0px;
+}
+
+body{
+background-color: #222222;
+overflow-y: hidden;
+}
+
+</style>
+
+<body>
+
+<script>
+
+var columns=4;
+var num_blocks=100;
+var blocks=new Array;
+var block_width=parseInt(window.innerWidth/columns)-50;
+var block_height=block_width;
+var j=0;
+
+function create()
+	{
+	for(var i=0;i<num_blocks;i++)
+		{
+		var b=document.createElement('div');
+		b.style.position="absolute";
+		b.style.left=25+parseInt(window.innerWidth/columns)*(i%columns);
+		if(i%columns==0)
+			j++;
+		b.style.top=25+(block_width+50)*(j-1);
+		b.style.width=block_width;
+		b.style.height=block_height;
+		b.style.backgroundColor="black";
+		b.style.border="5px red solid";
+		b.style.borderRadius="20px";
+		b.style.color="white";
+		b.style.fontSize=block_width*2/3;
+		b.innerHTML="<center>"+(i+1)+"</center>";
+		document.body.appendChild(b);
+		//blocks.push(i);
+	
+		}
+	}
+
+create();
+
+</script>
+
+
+</body>
+</html>
